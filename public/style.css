@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+.ms {
+    font-style: italic;
+    text-align: center;
+}
+#sign-up {
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+}
