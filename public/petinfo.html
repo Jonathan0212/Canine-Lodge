@@ -22,30 +22,30 @@
 
                 <div id="sign-up" class="col-6">
 
-                    <form onsubmit="handleSubmit()">
+                    <form id="pet-form">
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Pet Name</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                            <label for="petName" class="form-label">Pet Name</label>
+                            <input type="text" class="form-control" id="petName"
+                                >
 
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Breed Type</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1">
+                            <label for="breedType" class="form-label">Breed Type</label>
+                            <input type="text" class="form-control" id="breedType">
                         </div>
 
                         <div class="mb-3 form-check">
                             <label for="exampleInputPassword1" class="form-label">Gender</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
+                                <input class="form-check-input" type="radio" name="male"
+                                    id="maleInput">
+                                <label class="form-check-label" for="maleInput">
                                     Male
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" >
+                                <input class="form-check-input" type="radio" name="female"
+                                    id="female" >
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     Female
                                 </label>
@@ -55,8 +55,8 @@
                         <div class="mb-3 form-check">
                             <label for="exampleInputPassword1" class="form-label">Allergies</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
+                                <input class="form-check-input" type="radio" name="allergies"
+                                    id="allergies">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     Yes
                                 </label>
@@ -116,6 +116,6 @@
     </div>
 
 </body>
-<script src="index.js"></script>
+<script src="petinfo.js"></script>
 
 </html>
