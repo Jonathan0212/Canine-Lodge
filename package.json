@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Jonathan0212/Canine-Lodge#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "fullcalendar": "^5.10.2"
+    "fullcalendar": "^5.10.2",
+    "sweetalert2": "^11.4.4"
   }
 }

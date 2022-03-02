@@ -2,6 +2,8 @@
 <html lang='en'>
 
 <head>
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
     <meta charset='utf-8' />
     <link href='../node_modules/fullcalendar/main.css' rel='stylesheet' />
     <link rel="stylesheet" href="style.css" />
@@ -11,39 +13,7 @@
     <script src='../node_modules/fullcalendar/main.js'></script>
     <script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                selectable: true,
-                initialView: 'dayGridMonth', headerToolbar: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
-                },
-                events: [
-      {
-        title: 'Tex',
-        start: '2022-03-05'
-      },
-      {
-        title: 'Honey',
-        start: '2022-03-07',
-    
-      },],
-                select: function (info) {
-                
-                    var pName= window.prompt("what is your pets name?")
-                  
-                    var start= info.startStr
-                    var end= info.endStr
-                    var body= {
-                        pName,start,end
-                    }
-                    console.log(body)
-                }
-            });
-            calendar.render();
-        });
+
 
     </script>
 </head>
