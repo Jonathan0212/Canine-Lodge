@@ -36,6 +36,17 @@ router.get('/petinfo.html', async (req, res) => {
       res.status(500).json(err);
     }
   });
+  router.get('/schedule.html', async (req, res) => {
+    try {
+      
+      res.render('schedule', {
+     
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
 
 
 module.exports = router;
