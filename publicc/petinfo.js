@@ -25,6 +25,7 @@ function handlePetSubmit(e) {
 
     var body = { petName,grooming,aggressive,allergies,gender,breedType }
     console.log(body)
+    callApi()
 }
 
 window.addEventListener("DOMContentLoaded", function () {
