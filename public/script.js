@@ -69,16 +69,17 @@ document.addEventListener("DOMContentLoaded", () => {
         createAccountForm.classList.add("form-hidden");
     });
 
-    loginForm.addEventListener("submit", e => { 
+    loginForm.addEventListener("submit", e => {
+        console.log('submit') 
         e.preventDefault();
-
+        redirectLandingPage()
         // Perform Fetch login
 
-        if (passwordCheck(document.querySelector("input[name='password']").value)) {
-            setFormMessage(loginForm, "success", "You have successfully logged in!");
-        } else {
-            setFormMessage(loginForm, "error", "Invalid username/password combination");
-        }
+        // if (passwordCheck(document.querySelector("input[name='password']").value)) {
+        //     setFormMessage(loginForm, "success", "You have successfully logged in!");
+        // } else {
+        //     setFormMessage(loginForm, "error", "Invalid username/password combination");
+        // }
     });
 
     document.querySelectorAll(".form-input").forEach(inputElement => {
