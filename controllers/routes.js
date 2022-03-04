@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-router.get('/petinfo.html', async (req, res) => {
+router.get('/petinfo', async (req, res) => {
     try {
       
       res.render('petinfo', {
@@ -36,7 +36,7 @@ router.get('/petinfo.html', async (req, res) => {
       res.status(500).json(err);
     }
   });
-  router.get('/schedule.html', async (req, res) => {
+  router.get('/schedule', async (req, res) => {
     try {
       
       res.render('schedule', {

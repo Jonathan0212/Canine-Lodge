@@ -18,13 +18,13 @@
   },
   "homepage": "https://github.com/Jonathan0212/Canine-Lodge#readme",
   "dependencies": {
-    "express": "^4.17.3",
-    "fullcalendar": "^5.10.2",
-    "sweetalert2": "^11.4.4",
     "dotenv": "^8.2.0",
+    "express": "^4.17.3",
     "express-handlebars": "^5.2.0",
-    "handlebars": "^4.7.6",
+    "fullcalendar": "^5.10.2",
+    "handlebars": "^4.7.7",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "sweetalert2": "^11.4.4"
   }
 }

@@ -4,7 +4,7 @@ require('dotenv').config();
 const sequelize = new Sequelize(
   "pets_db",
   "root",
-  "Rowan40!",
+  "CarToy2001$",
   {
     host: 'localhost',
     dialect: 'mysql',
