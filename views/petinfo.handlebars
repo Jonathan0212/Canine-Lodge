@@ -1,104 +1,95 @@
- <link rel="stylesheet" href='/style.css' />
- <script src="petinfo.js"></script>
- <div class="container">
-        <div>
-            <h1>K-9 Lodge</h1>
-            <p class="ms">Grooming,Boarding,all your dogs needs</p>
-        </div>
-        <div>
-            <div class="row justify-content-center mt-6">
+<link rel="stylesheet" href='/style.css' />
+<script src="petinfo.js"></script>
+<div class="container">
+    <div>
+        <h1>K-9 Lodge</h1>
+        <p class="ms">Grooming,Boarding,all your dogs needs</p>
+    </div>
+    <div>
+        <div class="row justify-content-center mt-6">
 
-                <div id="sign-up" class="col-6">
+            <div id="sign-up" class="col-6">
 
-                    <form id="pet-form">
-                        <div class="mb-3">
-                            <label for="petName" class="form-label">Pet Name</label>
-                            <input type="text" class="form-control" id="petName"
-                                >
+                <form id="pet-form">
+                    <div class="mb-3">
+                        <label for="petName" class="form-label">Pet Name</label>
+                        <input type="text" class="form-control" id="petName">
 
+                    </div>
+                    <div class="mb-3">
+                        <label for="breedType" class="form-label">Breed Type</label>
+                        <input type="text" class="form-control" id="breedType">
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <label for="exampleInputPassword1" class="form-label">Gender</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="maleInput">
+                            <label class="form-check-label" for="maleInput">
+                                Male
+                            </label>
                         </div>
-                        <div class="mb-3">
-                            <label for="breedType" class="form-label">Breed Type</label>
-                            <input type="text" class="form-control" id="breedType">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id="female">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Female
+                            </label>
                         </div>
 
-                        <div class="mb-3 form-check">
-                            <label for="exampleInputPassword1" class="form-label">Gender</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender"
-                                    id="maleInput">
-                                <label class="form-check-label" for="maleInput">
-                                    Male
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender"
-                                    id="female" >
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Female
-                                </label>
-                            </div>
-
+                    </div>
+                    <div class="mb-3 form-check">
+                        <label for="exampleInputPassword1" class="form-label">Allergies</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="allergies" id="allergies">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Yes
+                            </label>
                         </div>
-                        <div class="mb-3 form-check">
-                            <label for="exampleInputPassword1" class="form-label">Allergies</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="allergies"
-                                    id="allergies">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Yes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="allergies"
-                                    id="flexRadioDefault2" >
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    No
-                                </label>
-                            </div>
-
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="allergies" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                No
+                            </label>
                         </div>
-                        <div class="mb-3 form-check">
-                            <label for="exampleInputPassword1" class="form-label">Aggressive</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="aggressive"
-                                    id="aggressive">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Yes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="aggressive"
-                                    id="flexRadioDefault2" >
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    No
-                                </label>
-                            </div>
 
+                    </div>
+                    <div class="mb-3 form-check">
+                        <label for="exampleInputPassword1" class="form-label">Aggressive</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="aggressive" id="aggressive">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Yes
+                            </label>
                         </div>
-                        <div class="mb-3 form-check">
-                            <label for="exampleInputPassword1" class="form-label">Grooming Needs</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="grooming"
-                                    id="grooming">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Yes
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="grooming"
-                                    id="flexRadioDefault2" >
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    No
-                                </label>
-                            </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="aggressive" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                No
+                            </label>
+                        </div>
 
+                    </div>
+                    <div class="mb-3 form-check">
+                        <label for="exampleInputPassword1" class="form-label">Grooming Needs</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="grooming" id="grooming">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Yes
+                            </label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="grooming" id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                No
+                            </label>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
-
         </div>
 
     </div>
+
+</div>

@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
             right: 'timeGridWeek,timeGridDay'
         },
         events: [
-{
-title: 'Tex',
-start: '2022-03-05'
-},
-{
-title: 'Honey',
-start: '2022-03-07',
+            {
+                title: 'Tex',
+                start: '2022-03-05'
+            },
+            {
+                title: 'Honey',
+                start: '2022-03-07',
 
-},],
+            },],
         select: async function (info) {
             const { value } = await Swal.fire({
                 title: 'Enter the pets name',
@@ -25,19 +25,19 @@ start: '2022-03-07',
                 inputValue: "",
                 showCancelButton: true,
                 inputValidator: (value) => {
-                //   if (!value) {
-                //     return 'You need to write something!'
-                //   }
+                    //   if (!value) {
+                    //     return 'You need to write something!'
+                    //   }
                 }
-              })
-             
-              
-            var pName= value
-          
-            var start= info.startStr
-            var end= info.endStr
-            var body= {
-                pName,start,end
+            })
+
+
+            var pName = value
+
+            var start = info.startStr
+            var end = info.endStr
+            var body = {
+                pName, start, end
             }
             console.log(body)
         }

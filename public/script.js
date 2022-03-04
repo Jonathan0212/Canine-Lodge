@@ -2,20 +2,20 @@ var redirectLandingPage = function () {
     window.location = "./petinfo.html";
 };
 
-var setLocalStorage = function(userInfo) {
+var setLocalStorage = function (userInfo) {
     console.dir(JSON.stringify(userInfo));
 
     // Set userInfo in localstorage
     localStorage.setItem("userInfo", JSON.stringify(userInfo));
 };
 
-var hashPassword = function(pass) {
+var hashPassword = function (pass) {
     // Couldn't find a good method to hash, so obfuscating with base64 encoding for now
     // Method is not secure and should not be used in production environments
     return btoa(pass);
 };
 
-var passwordCheck = function(userPass) {
+var passwordCheck = function (userPass) {
     var userInfo = localStorage.getItem("userInfo");
     // Compare user input password to password in localstorage
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     loginForm.addEventListener("submit", e => {
-        console.log('submit') 
+        console.log('submit')
         e.preventDefault();
         redirectLandingPage()
         // Perform Fetch login

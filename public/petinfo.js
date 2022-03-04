@@ -17,15 +17,16 @@ function handlePetSubmit(e) {
     var aggressive = document.getElementById("aggressive").checked
 
     var grooming = document.getElementById("grooming").checked
-    
-  
 
 
 
 
-    var body = { petName,grooming,aggressive,allergies,gender,breedType }
+
+
+    var body = { petName, grooming, aggressive, allergies, gender, breedType }
     console.log(body)
     callApi()
+    window.location = "./schedule.html";
 }
 
 window.addEventListener("DOMContentLoaded", function () {
