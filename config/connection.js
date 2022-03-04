@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
+// create connection to DB
 const sequelize = new Sequelize(
   "pets_db",
   "root",
