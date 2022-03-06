@@ -45,7 +45,7 @@ Forum.init(
             defaultValue: true,
         },
          user_id: {
-            type: Dataypes.INTEGER,
+            type: DataTypes.INTEGER,
              references: {
                 model: 'user',
                 key: 'id'
