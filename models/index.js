@@ -1,5 +1,7 @@
 const User = require('./User');
+const Forum = require('./forum');
 
-
-
-module.exports = { User };
+module.exports = {
+    User,
+    Forum,
+};

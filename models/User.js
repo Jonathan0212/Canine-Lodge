@@ -7,7 +7,12 @@ class User extends Model {}
 //define tabler columns and configuration
 User.init(
 {
-// defining a email column
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true
+        },  
     email: {
         type: Dataypes.STRING,
         allowNull: false,
@@ -20,13 +25,21 @@ User.init(
         validate: {
             len: [8]
         }
+    },
+    user_id: {
+        type: Dataypes.INTEGER,
+        references: {
+            model: 'user',
+            key: 'id'
+        }
     }
 },
     {
         sequelize,
-        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'User'
     }
 );
+
+module.exports = User;
