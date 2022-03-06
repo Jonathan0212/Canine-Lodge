@@ -3,7 +3,19 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // GET /api/users
-router.get('/', (req, res) => {});
+router.get('/', (req, res) => {
+    User.findAll({
+        attributes: [
+            'email',
+            'password',
+        ],
+    })
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 // GET /api/users/1
 router.get('/:id', (req, res) => {});

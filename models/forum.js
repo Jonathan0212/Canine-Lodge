@@ -1,4 +1,4 @@
- const { Model, DataTypes } = require("sequelize/types");
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Forum extends Model {}
@@ -49,11 +49,11 @@ Forum.init(
             allowNull: false,
             defaultValue: true,
         },
-    // UNIQUE user ID
-         user_id: {
+    // UNIQUE forum ID
+         forum_id: {
             type: DataTypes.INTEGER,
              references: {
-                model: 'user',
+                model: 'forum',
                 key: 'id'
         }
     }
