@@ -7,30 +7,25 @@ class User extends Model {}
 //define table columns and configuration
 User.init(
 {
+ //creates a unique ID
     id: {
         type:DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
         },  
+// email column
     email: {
         type:DataTypes.STRING,
         allowNull: false,
         unique: true
     },
-// definingp password column
+//  password column
     password: {
         type:DataTypes.STRING,
         allowNull: false,
         validate: {
             len: [8]
-        }
-    },
-    user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'user',
-            key: 'id'
         }
     }
 },
