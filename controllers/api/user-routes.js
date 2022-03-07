@@ -3,7 +3,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // GET /api/users
-router.get('/', (req, res) => {
+router.get('/api', (req, res) => {
     User.findAll({
         attributes: [
             'email',
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 });
 
 // GET /api/users/1
-router.get('/:id', (req, res) => {});
+router.get('/api/:id', (req, res) => {});
 
 // POST /api/users
 router.post('/', (req, res) => {});
