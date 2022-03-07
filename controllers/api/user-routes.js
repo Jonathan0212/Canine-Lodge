@@ -21,7 +21,11 @@ router.get('/api', (req, res) => {
 router.get('/api/:id', (req, res) => {});
 
 // POST /api/users
-router.post('/', (req, res) => {});
+router.post('/', (req, res) => {
+    console.log("here")
+    console.log(req.body)
+    res.send("hello")
+});
 
 // PUT /api/users/1
 router.put('/:id', (req, res) => {});

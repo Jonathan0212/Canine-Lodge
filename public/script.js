@@ -69,10 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
         createAccountForm.classList.add("form-hidden");
     });
 
-    loginForm.addEventListener("submit", e => {
+    loginForm.addEventListener("submit",async e => {
         console.log('submit') 
         e.preventDefault();
-        redirectLandingPage()
+        var username= document.getElementById("username").value
+        var password= document.getElementById("password").value
+        console.log(username, password)
+        const res=await callApi("http://localhost:3000/api/user/","POST",{username,password})
+        console.log(res)
+        // redirectLandingPage()
         // Perform Fetch login
 
         // if (passwordCheck(document.querySelector("input[name='password']").value)) {
