@@ -1,4 +1,4 @@
-/* const router = require('express').Router();
+ const router = require('express').Router();
 const { forum } = require('../../models');
 
 
@@ -11,11 +11,14 @@ router.get('/api', (req, res) => {
 router.get('/:id', (req, res) => {});
 
 // POST /api/users
-router.post('/', (req, res) => {});
+router.post('/', (req, res) => {
+    console.log(req.body)
+    res.json({data:"hello"})
+});
 
 // PUT /api/users/1
 router.put('/:id', (req, res) => {});
 
 // DELETE /api/users/1
 router.delete('/:id', (req, res) => {});
-*/
+module.exports=router

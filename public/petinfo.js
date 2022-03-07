@@ -1,5 +1,5 @@
 
-function handlePetSubmit(e) {
+async function handlePetSubmit(e) {
     e.preventDefault()
 
     var petName = document.getElementById("petName").value
@@ -25,7 +25,8 @@ function handlePetSubmit(e) {
 
     var body = { petName,grooming,aggressive,allergies,gender,breedType }
     console.log(body)
-    callApi()
+    const res =await callApi("http://localhost:3000/api/forum/","POST",body)
+    console.log(res)
 }
 
 window.addEventListener("DOMContentLoaded", function () {

@@ -1,5 +1,5 @@
 var redirectLandingPage = function () {
-    window.location = "./petinfo.html";
+    window.location = "./petinfo";
 };
 
 var setLocalStorage = function(userInfo) {
@@ -76,7 +76,11 @@ document.addEventListener("DOMContentLoaded", () => {
         var password= document.getElementById("password").value
         console.log(username, password)
         const res=await callApi("http://localhost:3000/api/user/","POST",{username,password})
-        console.log(res)
+       if(res.id){
+           localStorage.setItem("id",res.id)
+             redirectLandingPage()
+        }
+
         // redirectLandingPage()
         // Perform Fetch login
 

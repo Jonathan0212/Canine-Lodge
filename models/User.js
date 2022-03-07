@@ -48,5 +48,12 @@ hooks: {
         modelName: 'User'
     } 
 );
-
+// (async () => {
+//     await sequelize.sync();
+//     const jane = await User.create({
+//       email: "janedoe2@aol.com",
+//       password: "12345678",
+//     });
+//     console.log(jane.toJSON());
+//   })();
 module.exports = User;
