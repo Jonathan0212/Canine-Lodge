@@ -19,7 +19,7 @@ require('dotenv').config();
 //       dialect: 'mysql',
 //       port: 3306
 //     });
-const sequelize = new Sequelize("PETS", "admin",process.env.DB_PWD , {
+const sequelize = new Sequelize("PETS", "admin", process.env.DB_PWD, {
   host: "database-1.cninn4p5rifp.us-west-2.rds.amazonaws.com",
   dialect: "mysql",
   port: 3306,
