@@ -22,8 +22,8 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
     console.log(req.body)
     const pet = await Forum.create({
-        Pet_Name: req.body.petName,
-        Breed_type: req.body.breedType,
+        pet_Name: req.body.petName,
+        breed_type: req.body.breedType,
         gender: req.body.gender,
         allergies: req.body.allergies,
         aggressive: req.body.aggressive,

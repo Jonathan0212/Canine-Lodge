@@ -36,8 +36,18 @@ router.post('/',async (req, res) => {
         //   console.log("user data", data);
           if (data.length>0){
               const user= data[0].dataValues
-          res.json({id:user.id})
+              const pwd = user.password;
+        bcrypt.compare(req.body.password, pwd, function (err, result) {
+          if (result) {
+            res.json({ id: user.id });
+          } else {
+            res.json({ id: null });
+          }
+        });
+      
 
+          }else{
+            res.json({ id: null });  
           }
         })
         .catch((e) => {

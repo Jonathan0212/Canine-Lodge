@@ -79,6 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
        if(res.id){
            localStorage.setItem("id",res.id)
              redirectLandingPage()
+        }else{
+                setFormMessage(loginForm, "error", "Invalid username/password combination");
         }
 
         // redirectLandingPage()

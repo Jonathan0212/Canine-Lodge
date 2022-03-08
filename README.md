@@ -15,8 +15,8 @@ easy week view to display the dog who will be attending organized by the day of 
 * [License](#License)
 
 ## Usage
-🏆 Our app will be deployed through this link: [Heroku]()
-
+🏆 Our app will be deployed through this link: [Heroku](https://canine-lodge.herokuapp.com/)
+Must use sample username or email: janedoe@gmail.com, password:1234abcd
 
 ## Technologies 
 * MySQL

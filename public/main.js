@@ -2,7 +2,7 @@ var host="http://localhost:3000/"
 host= "https://canine-lodge.herokuapp.com/"
 async function callApi(path= '', method="GET",data ) {
    
-    const response = await fetch(host + path, {
+    const response = await fetch(path, {
       method,
       mode: 'cors', 
       cache: 'no-cache', 

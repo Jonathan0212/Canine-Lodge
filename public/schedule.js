@@ -50,10 +50,14 @@ document.addEventListener('DOMContentLoaded', async function () {
                 pName, start, end
             }
             var id = dogObj[body.pName]
+            if(!id){
+                return
+            }
             body.id = id
             console.log(body)
             const data = await callApi("api/forum/schedule", "POST", body)
             console.log(data)
+            calendar.addEvent({ ...body, title: body.pName });
         }
     });
     calendar.render();
