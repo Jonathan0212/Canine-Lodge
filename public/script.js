@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         var username= document.getElementById("username").value
         var password= document.getElementById("password").value
         console.log(username, password)
-        const res=await callApi("http://localhost:3000/api/user/","POST",{username,password})
+        const res=await callApi("api/user/","POST",{username,password})
        if(res.id){
            localStorage.setItem("id",res.id)
              redirectLandingPage()

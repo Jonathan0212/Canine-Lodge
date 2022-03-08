@@ -25,7 +25,7 @@ async function handlePetSubmit(e) {
 
     var body = { petName,grooming,aggressive,allergies,gender,breedType }
     console.log(body)
-    const res =await callApi("http://localhost:3000/api/forum/","POST",body)
+    const res =await callApi("api/forum/","POST",body)
     console.log(res)
 }
 
