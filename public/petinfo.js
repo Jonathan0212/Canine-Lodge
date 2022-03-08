@@ -27,6 +27,7 @@ async function handlePetSubmit(e) {
     console.log(body)
     const res =await callApi("api/forum/","POST",body)
     console.log(res)
+    window.location="/calendar"
 }
 
 window.addEventListener("DOMContentLoaded", function () {

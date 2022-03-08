@@ -22,7 +22,7 @@ router.get('/petinfo', async (req, res) => {
       res.status(500).json(err);
     }
   });
-  router.get('/schedule', async (req, res) => {
+  router.get('/calendar', async (req, res) => {
     try {
       
       res.render('schedule', {
