@@ -1,4 +1,22 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
+    var dogs = await callApi("api/forum", "GET")
+
+
+    var dogObj = {}
+    var idToName = {}
+    dogs.forEach(dog => {
+        dogObj[dog.pet_Name] = dog.id
+        idToName[dog.id] = dog.pet_Name
+    })
+    console.log(dogObj)
+    var events = await callApi("api/forum/schedule", "GET")
+    events= events.map(event =>{
+        event.title=idToName[event.dog_id]
+        event.start= event.start_time
+        event.end= event.end_time
+        return event
+    })
+    console.log(events)
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
         selectable: true,
@@ -7,16 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
             center: 'title',
             right: 'timeGridWeek,timeGridDay'
         },
-        events: [
-{
-title: 'Tex',
-start: '2022-03-05'
-},
-{
-title: 'Honey',
-start: '2022-03-07',
-
-},],
+        events
+        ,
         select: async function (info) {
             const { value } = await Swal.fire({
                 title: 'Enter the pets name',
@@ -25,21 +35,25 @@ start: '2022-03-07',
                 inputValue: "",
                 showCancelButton: true,
                 inputValidator: (value) => {
-                //   if (!value) {
-                //     return 'You need to write something!'
-                //   }
+                    //   if (!value) {
+                    //     return 'You need to write something!'
+                    //   }
                 }
-              })
-             
-              
-            var pName= value
-          
-            var start= info.startStr
-            var end= info.endStr
-            var body= {
-                pName,start,end
+            })
+
+
+            var pName = value
+
+            var start = info.startStr
+            var end = info.endStr
+            var body = {
+                pName, start, end
             }
+            var id = dogObj[body.pName]
+            body.id = id
             console.log(body)
+            const data = await callApi("api/forum/schedule", "POST", body)
+            console.log(data)
         }
     });
     calendar.render();

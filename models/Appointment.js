@@ -18,7 +18,7 @@ Appointment.init(
     dog_id: {
         type:DataTypes.INTEGER,
         allowNull: false,
-        unique: true
+        unique: false
     },
     start_time: {
         type:DataTypes.STRING,

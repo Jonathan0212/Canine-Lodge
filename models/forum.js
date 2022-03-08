@@ -13,13 +13,13 @@ Forum.init(
             autoIncrement: true
             },  
      // Pet name column
-        Pet_Name: {
+        pet_Name: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true
                     },
     // Pet Breed Column
-        Breed_type: {
+        breed_type: {
             type: DataTypes.STRING,
             allowNull: false,
                     },
@@ -50,13 +50,13 @@ Forum.init(
             defaultValue: true,
         },
     // UNIQUE forum ID
-         forum_id: {
-            type: DataTypes.INTEGER,
-             references: {
-                model: 'forum',
-                key: 'id'
-        }
-    }
+    //      forum_id: {
+    //         type: DataTypes.INTEGER,
+    //          references: {
+    //             model: 'forum',
+    //             key: 'id'
+    //     }
+    // }
 },
     {   sequelize,
         freezeTableName: true,
