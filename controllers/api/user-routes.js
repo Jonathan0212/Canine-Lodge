@@ -2,6 +2,31 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt')
 const { User } = require('../../models');
 
+
+router.post('/login', async (req,res) => {
+  try{
+  const user = await User.findOne({
+    where: {
+      email: req.body.email
+    }
+  })
+  if(!user){
+    res.status(400).json({ messgae: 'No user found'})
+    return
+  }
+  res.json({user})
+}
+catch(err){
+  res.status(400).json({
+    message:'User login failed'
+  })
+}
+})
+
+
+
+
+
 // GET /api/users
 router.get('/api', (req, res) => {
     User.findAll({
