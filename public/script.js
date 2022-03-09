@@ -1,5 +1,6 @@
 var redirectLandingPage = function () {
-    window.location = "./petinfo";
+    document.location.replace('/petinfo')
+    // window.location = "./petinfo";
 };
 
 var setLocalStorage = function(userInfo) {
@@ -72,11 +73,20 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.addEventListener("submit",async e => {
         console.log('submit') 
         e.preventDefault();
-        var username= document.getElementById("username").value
+        var email= document.getElementById("email").value
         var password= document.getElementById("password").value
-        console.log(username, password)
-        const res=await callApi("api/user/","POST",{username,password})
-       if(res.id){
+        console.log(email, password)
+        const res=await fetch("/api/user/login",{
+            method:"POST",
+            body: JSON.stringify ({
+                email,
+                password
+            }),
+           headers: {
+               "Content-Type": "application/json"
+           } 
+        })
+       if(res.ok){
            localStorage.setItem("id",res.id)
              redirectLandingPage()
         }else{
