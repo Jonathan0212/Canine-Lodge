@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const sequelize = require('../config/connection');
 // const { Gallery, Painting } = require('../models');
 
 // GET all galleries for homepage
